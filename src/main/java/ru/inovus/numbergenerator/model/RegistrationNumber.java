@@ -1,6 +1,9 @@
 package ru.inovus.numbergenerator.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.RequiredArgsConstructor;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -12,8 +15,11 @@ import javax.persistence.UniqueConstraint;
 
 @Entity(name = "RegistrationNumber")
 @Table(name = "registration_number",
-uniqueConstraints = @UniqueConstraint(name = "reg_plate_unique",columnNames = "registration_plate"))
+        uniqueConstraints = @UniqueConstraint(name = "reg_plate_unique", columnNames = "registration_plate"))
 @Data
+@Builder
+@RequiredArgsConstructor
+@AllArgsConstructor
 public class RegistrationNumber {
 
     @Id

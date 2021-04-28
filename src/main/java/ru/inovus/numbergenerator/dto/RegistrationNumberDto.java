@@ -1,10 +1,14 @@
 package ru.inovus.numbergenerator.dto;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import ru.inovus.numbergenerator.model.Country;
 
 
 @Data
+@Builder
+@AllArgsConstructor
 public class RegistrationNumberDto {
 
     private String registrationPlate;
